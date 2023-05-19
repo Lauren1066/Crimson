@@ -21,7 +21,6 @@ async function deploy() {
   }
   const rest = new REST({ version: "10" }).setToken(token);
 
-  // Delete all commands
   rest
     .get(Routes.applicationGuildCommands(clientId, constantsFile.mainServerID))
     .then((data) => {
