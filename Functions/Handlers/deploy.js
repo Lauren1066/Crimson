@@ -22,12 +22,12 @@ async function deploy() {
   const rest = new REST({ version: "10" }).setToken(token);
 
   rest
-    .get(Routes.applicationGuildCommands(clientId, constantsFile.mainServerID))
+    .get(Routes.applicationGuildCommands(clientId, constantsFile.testServerID))
     .then((data) => {
       const promises = [];
 
       for (const command of data) {
-        const deleteUrl = `${Routes.applicationGuildCommands(clientId, constantsFile.mainServerID)}/${command.id}`;
+        const deleteUrl = `${Routes.applicationGuildCommands(clientId, constantsFile.testServerID)}/${command.id}`;
         promises.push(rest.delete(deleteUrl));
       }
       return Promise.all(promises);

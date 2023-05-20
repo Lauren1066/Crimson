@@ -5,9 +5,9 @@ module.exports = {
   name: "guildMemberAdd",
   once: false,
   async execute(member) {
-    if (member.guild.id !== constantsFile.mainServerID) return;
+    if (member.guild.id !== constantsFile.testServerID) return;
 
-    const welcomeChannel = await member.guild.channels.fetch(constantsFile.mainServerID);
+    const welcomeChannel = await member.guild.channels.fetch(constantsFile.testChannelID);
     const embed = new EmbedBuilder()
       .setTitle(`Welcome ${member.user.username}!`)
       .setDescription(

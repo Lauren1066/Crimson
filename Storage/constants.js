@@ -9,6 +9,9 @@ const ids = {
   // Channel IDs
   welcomeChannelID: "891718466778857474",
   testChannelID: "1105400884172697601",
+
+  // Category IDs
+  ticketCategoryID: "1105400691448623194",
 };
 
 module.exports = {
